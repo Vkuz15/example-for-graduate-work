@@ -112,10 +112,10 @@ public class AdController {
     @Operation(summary = "Обновление картинки объявления", tags = {"Объявления"})
     @PatchMapping(path = "/ads/{id}/image", consumes = "multipart/from-data")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200",
-                    description = "OK",
-                    content = @Content(mediaType = "application/octet-stream",
-                            array = @ArraySchema(schema = @Schema(type = "string", format = "byte")))),
+            @ApiResponse(responseCode = "200", description = "OK", content = {
+                    @Content(mediaType = "application/octet-stream",
+                            array = @ArraySchema(schema = @Schema(type = "string", format = "byte")))
+            }),
             @ApiResponse(responseCode = "401", description = "Unauthorized", content = @Content(mediaType = "")),
             @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content(mediaType = "")),
             @ApiResponse(responseCode = "404", description = "Not Found", content = @Content(mediaType = "")),
