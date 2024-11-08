@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class LoginDTO {
+public class LoginModel {
 
     @Schema(minLength = 8, maxLength = 16, description = "Пароль")
     private String password;

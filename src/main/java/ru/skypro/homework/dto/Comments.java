@@ -2,7 +2,7 @@ package ru.skypro.homework.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
-import ru.skypro.homework.model.CommentDTO;
+import ru.skypro.homework.model.CommentModel;
 
 @Data
 public class Comments {
@@ -10,5 +10,5 @@ public class Comments {
     @Schema(description = "Общее количество комментариев")
     private Integer count;
 
-    private CommentDTO result;
+    private CommentModel result;
 }

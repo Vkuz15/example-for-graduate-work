@@ -1,7 +1,7 @@
 package ru.skypro.homework.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.skypro.homework.model.ExtendedAdDTO;
+import ru.skypro.homework.model.ExtendedAdModel;
 
-public interface ExtendedAdRepository extends JpaRepository<ExtendedAdDTO, Long> {
+public interface ExtendedAdRepository extends JpaRepository<ExtendedAdModel, Long> {
 }

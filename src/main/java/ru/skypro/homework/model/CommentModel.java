@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class CommentDTO {
+public class CommentModel {
 
     @Schema(description = "id автора комментария")
     private Integer author;

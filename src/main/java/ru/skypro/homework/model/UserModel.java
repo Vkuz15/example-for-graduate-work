@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "app_user")
-public class UserDTO {
+public class UserModel {
 
     @Schema(description = "id пользователя")
     @Id

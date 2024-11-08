@@ -14,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 import ru.skypro.homework.dto.NewPassword;
 import ru.skypro.homework.dto.UpdateUser;
 import ru.skypro.homework.dto.User;
-import ru.skypro.homework.model.UserDTO;
+import ru.skypro.homework.model.UserModel;
 
 @RestController
 @CrossOrigin(value = "http://localhost:3000")
@@ -43,7 +43,7 @@ public class UserController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "OK", content = {
                     @Content(mediaType = "application/json",
-                            schema = @Schema(implementation = UserDTO.class))
+                            schema = @Schema(implementation = UserModel.class))
             }),
             @ApiResponse(responseCode = "401", description = "Unauthorized", content = @Content(mediaType = ""))
     })

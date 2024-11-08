@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class ExtendedAdDTO {
+public class ExtendedAdModel {
 
     @Schema(description = "id объявления")
     @Id

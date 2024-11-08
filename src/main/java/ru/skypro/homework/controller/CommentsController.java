@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.skypro.homework.dto.Comments;
 import ru.skypro.homework.dto.CreateOrUpdateComment;
-import ru.skypro.homework.model.CommentDTO;
+import ru.skypro.homework.model.CommentModel;
 
 @RestController
 @CrossOrigin(value = "http://localhost:3000")
@@ -39,7 +39,7 @@ public class CommentsController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "created", content = {
                     @Content(mediaType = "application/json",
-                            schema = @Schema(implementation = CommentDTO.class))
+                            schema = @Schema(implementation = CommentModel.class))
             }),
             @ApiResponse(responseCode = "401", description = "Unauthorized", content = @Content(mediaType = "")),
             @ApiResponse(responseCode = "404", description = "Not Found", content = @Content(mediaType = ""))
@@ -67,7 +67,8 @@ public class CommentsController {
     @PatchMapping(path = "/ads/{adId}/comments/{commentId}")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "OK", content = {
-                    @Content(mediaType = "application/json", schema = @Schema(implementation = CommentDTO.class))
+                    @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = CommentModel.class))
             }),
             @ApiResponse(responseCode = "401", description = "Unauthorized", content = @Content(mediaType = "")),
             @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content(mediaType = "")),
